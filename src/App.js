@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Product from "./Product";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1> Hello World</h1>
+
+      <Product
+        name="Amazon Echo"
+        description="Your AI assistant"
+        price={59.99} /> {/* becaus we passe a number in price so we use jsx.*/}
+
+      <Product
+        name="iphone 12"
+        description="the best"
+        price={1200} /> {/* becaus we passe a number in price so we use jsx.*/}
+
+      <Product
+        name="Macbook pro"
+        description="your favour computer"
+        price={2500} /> {/* becaus we passe a number in price so we use jsx.*/}
     </div>
   );
 }
