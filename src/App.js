@@ -1,25 +1,32 @@
-import "./App.css";
-import Product from "./Product";
+import React, {useState} from "react";
+
+// importent point state is non-persistent wich means that when the user refreshes or leave the web page the state will disappear
 
 function App() {
+
+
+  const [count, setCount] = useState(0);
+
+
+
+
+  const increment =  ()=>{
+   
+    setCount(count +1);
+  }
+  const decrement = ()=>{
+    setCount(count -1);
+  } 
+
   return (
     <div>
-      <h1> Hello World</h1>
+     
+     <h1> welcome dude </h1>
+     <p>the count is {count}</p>
 
-      <Product
-        name="Amazon Echo"
-        description="Your AI assistant"
-        price={59.99} /> {/* becaus we passe a number in price so we use jsx.*/}
+     <button onClick={decrement} style={{padding:10}}>-</button>
+     <button onClick={increment} style={{padding:10}}>+</button>
 
-      <Product
-        name="iphone 12"
-        description="the best"
-        price={1200} /> {/* becaus we passe a number in price so we use jsx.*/}
-
-      <Product
-        name="Macbook pro"
-        description="your favour computer"
-        price={2500} /> {/* becaus we passe a number in price so we use jsx.*/}
     </div>
   );
 }
